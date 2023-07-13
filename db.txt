@@ -1,0 +1,29 @@
+
+CREATE DATABASE eshop ;
+USE eshop;
+CREATE TABLE customer(
+customer_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+first_name VARCHAR(60) NOT NULL,
+last_name VARCHAR(60) NOT NULL,
+customer_age MEDIUMINT NOT NULL,
+address VARCHAR(100) NOT NULL,
+pass VARCHAR(50) NOT NULL,
+phone VARCHAR(50) NOT NULL,
+email VARCHAR(100) NOT NULL,
+PRIMARY KEY(customer_id)
+);
+
+
+USE eshop;
+CREATE TABLE customer_order(
+order_id INT NOT NULL AUTO_INCREMENT,
+customer_id INT  NOT NULL  references customer(customer_id),
+items_number   MEDIUMINT UNSIGNED NOT NULL,
+order_date DATE,
+total DECIMAL(8,2) UNSIGNED NOT NULL,
+PRIMARY KEY(order_id)
+);
+
+
+USE eshop;
+INSERT INTO customer_order(customer_id,items_number,order_date,total)     VALUES (4,5,CURRENT_DATE,246);
