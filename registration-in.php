@@ -107,8 +107,9 @@
       <span>
       <a href="basket.php">
       <img src="images/shopping-cart-8.png" class="img-responsive img2 pull-right" alt="Responsive image">
-      </span> 
       </a>
+      </span> 
+      
       <span>
         <a href="logIn.php">
         <img src="images/user.png" class="img-responsive img2 pull-right" alt="Responsive image">  
